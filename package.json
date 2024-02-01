@@ -7,7 +7,7 @@
   "private": true,
   "scripts": {
     "dev:electron": "quasar dev -m electron --remote-debugging-port=9222",
-    "build:electron": "quasar build --mode electron"
+    "build:electron": "quasar build --mode electron && cp -r 'lib-repo/sharp-win32-x64' 'dist/electron/Packaged/Quasar Electron App with sharp-win32-x64/resources/app.asar.unpacked/node_modules/@img'"
   },
   "dependencies": {
     "@quasar/extras": "^1.16.4",
