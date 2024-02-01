@@ -182,7 +182,7 @@ module.exports = configure(function (/* ctx */) {
         // Windows only
         // win32metadata: { ... }
         // platform: ['linux'],
-        platform: ['win32'],
+        platform: ['win32', 'linux'],
         asar: {
           unpackDir: path.join('**', 'node_modules', '{sharp,@img}', '**', '*'),
         },
