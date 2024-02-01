@@ -14,9 +14,11 @@ The electron main process uses the sharp library to resize an image (media/Lenna
 
 * This works also perfectly fine in production mode on Linux with `npm run build:electron` and the run the app with `dist/electron/Packaged/Quasar\ Electron\ App\ with\ sharp-linux-x64/Quasar\ Electron\ App\ with\ sharp`
 
-* The problem occurs when launching the Windows build, as the module `sharp-win32-x64` is not resolved. When launching the app by double-clicking the icon, it failes with an error message and doesn't event launch the GUI part.
+* The problem occurs when launching the Windows build, as the module `sharp-win32-x64` is not resolved. When launching the app by double-clicking the icon, it fails with an error message and doesn't event launch the GUI part.
 
-* There is a [npm issue](https://github.com/npm/cli/issues/4828), making it difficult to get the `sharp-win32-x64` deployed alongside the other platform libs. However even if `sharp-win32-x64` is manually copied to the build folder (where I guess it should be normally), it is not resolved either. That is the purpose of the `&& cp ...` part in the `build:electron` script in `package.json`
+The error message : `Could not load the "sharp" module using the win32-x64 runtime`
+
+- There is a [npm issue](https://github.com/npm/cli/issues/4828), making it difficult to get the `sharp-win32-x64` deployed alongside the other platform libs. However even if `sharp-win32-x64` is manually copied to the build folder (where I guess it should be normally), it is not resolved either. That is the purpose of the `&& cp ...` part in the `build:electron` script in `package.json`
 
 ## Commands
 
